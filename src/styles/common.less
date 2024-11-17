@@ -1,0 +1,176 @@
+@import url('./theme.less');
+// 列表页面雷同样式
+.common-warp {
+    height: 100%;
+    width: 100%;
+    background-color: @main-bg-color;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 0;
+
+    .title {
+        font-size: 16px;
+        color: @main-text-color;
+        line-height: 1;
+        margin-bottom: 20px;
+        flex-shrink: 0;
+        font-weight: 600;
+    }
+
+    .list-tool-warp {
+        display: flex;
+        margin: 20px 0;
+        flex-shrink: 0;
+        .tool-btn {
+            margin-right: 20px;
+        }
+    }
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid @sub-bg-color;
+    flex-shrink: 0;
+
+    .search-form-row {
+        display: flex;
+        padding-bottom: 20px;
+    }
+    .search-form-item {
+        width: 33%;
+        display: flex;
+        margin-right: 20px;
+        &:last-of-type  {
+            margin-right: 0;
+        }
+        .label {
+            display: flex;
+            width: 60px;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            color: @main-text-color;
+        }
+        .ant-select {
+            width: 100%;
+        }
+    }
+    .search-form-tool {
+        min-width: 80px;
+    }
+}
+
+// table
+.common-table {
+    height: 80%;
+    padding-bottom: 20px;
+    background-color: @main-bg-color;
+    color: @main-text-color;
+    &::-webkit-scrollbar-thumb {
+        border-radius: 1px;
+        background: #dce3e8;
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.2, #59b7ea), color-stop(0.7, #7ab7f1), color-stop(1, #495fed));
+        cursor: pointer;
+    }
+    .ant-table-thead > tr > th {
+        background-color: @main-bg-color;
+        color: @main-text-color;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 8px 4px;
+        border-color: @sub-bg-color;
+        border-radius: 0 !important;
+    }
+    .ant-table-scroll {
+        overflow: hidden;
+    }
+}
+.common-table-row {
+    background-color: @main-bg-color;
+    td {
+        font-size: 14px;
+        color: @main-text-color;
+        border-bottom: none !important;
+        padding: 9px 4px !important;
+    }
+}
+
+// 分页
+.ant-pagination-item {
+    border: none !important;
+    background-color: @sub-bg-color !important;
+    color: @main-text-color !important;
+}
+.ant-pagination-item:focus, .ant-pagination-item:hover {
+    background: @hover-bg-color;
+    color: @main-text-active-color;
+}
+.ant-pagination-item-active {
+    background: @hover-bg-color !important;
+    color: @main-text-active-color !important;
+}
+.ant-pagination-item-active:focus, .ant-pagination-item-active:hover {
+    background: @hover-bg-color;
+    color: @main-text-active-color;
+}
+
+.ant-pagination-jump-prev, .ant-pagination-jump-next {
+    &::before {
+        content: '...';
+    }
+}
+.ant-pagination-prev, .ant-pagination-next{
+    color: @main-text-color !important;
+}
+
+// 弹出框基本公共样式
+.common-modal {
+    background-color: @main-bg-color;
+    .ant-modal-body {
+        background-color: @main-bg-color;
+        padding: 0 30px;
+        box-sizing: border-box;
+
+    }
+    .header {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+            color: @main-text-color;
+        }
+
+        .icon-close {
+            color: @main-text-color;
+        }
+    }
+
+    .ant-form-item-control-input-content, .ant-input {
+        background-color: @main-bg-color !important;
+    }
+    .ant-select-selector, .ant-select {
+        background-color: @main-bg-color !important;
+    }
+}
+
+// 底部操作栏
+.common-tool-warp {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: @main-bg-color;
+    width: 100%;
+    height: 56px;
+    align-items: center;
+    .ant-btn {
+        margin-right: 20px;
+    }
+}
